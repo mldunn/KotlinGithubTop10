@@ -1,0 +1,3 @@
+rootProject.name = 'kotlin-github-top10'
+
+include 'kotlin-github-top10-jvm', 'kotlin-github-top10-js'
