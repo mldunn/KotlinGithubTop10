@@ -1,23 +1,26 @@
-buildscript {
-    ext.kotlin_version = '1.2.10'
+allprojects {
+    buildscript {
+        ext.kotlin_version = '1.2.21'
+        ext.kotlinx_html_version = '0.6.8'
+        ext.frontend_plugin_version = '0.0.27'
+        ext.serialization_version = '0.4.1'
+
+        repositories {
+            maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
+            maven { url "https://plugins.gradle.org/m2/" }
+            maven { url "https://kotlin.bintray.com/kotlinx" }
+            jcenter()
+        }
+
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+            classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$serialization_version"
+        }
+    }
 
     repositories {
-        mavenCentral()
+        maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2' }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        jcenter()
     }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-
-apply plugin: 'kotlin-platform-common'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
 }
