@@ -1,5 +1,4 @@
 import kotlinx.serialization.Serializable
 
 @Serializable
-class Repo(val title: String, val starts: Int, val forks: Int) {
-}
+data class Repo(var title: String, var stars: Int, var forks: Int)
