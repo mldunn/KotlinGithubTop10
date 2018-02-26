@@ -31,4 +31,11 @@ dependencies {
     compile project(":common-jvm")
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.3.0'
+    implementation group: 'com.squareup.retrofit2', name: 'adapter-rxjava2', version: '2.3.0'
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    implementation group: 'io.reactivex.rxjava2', name: 'rxandroid', version: '2.0.2'
+    compile 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.0.1'
 }
