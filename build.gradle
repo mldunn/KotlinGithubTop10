@@ -9,6 +9,7 @@ allprojects {
             maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
             maven { url "https://plugins.gradle.org/m2/" }
             maven { url "https://kotlin.bintray.com/kotlinx" }
+            google()
             jcenter()
         }
 
@@ -21,6 +22,7 @@ allprojects {
     repositories {
         maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2' }
         maven { url "https://kotlin.bintray.com/kotlinx" }
+        google()
         jcenter()
     }
 }
