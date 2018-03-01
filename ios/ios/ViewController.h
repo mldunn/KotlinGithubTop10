@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
+- (IBAction)buttonPressed:(id)sender;
+
 @end
 

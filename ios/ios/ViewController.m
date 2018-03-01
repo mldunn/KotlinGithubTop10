@@ -26,7 +26,6 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
-    // empty because it will be called from Kotlin
 }
 
 @end
