@@ -25,10 +25,16 @@ class ViewController : UIViewController {
 
     @ObjCOutlet
     lateinit var label: UILabel
+
     @ObjCOutlet
     lateinit var textField: UITextField
+
     @ObjCOutlet
     lateinit var button: UIButton
+
+    @ObjCOutlet
+    lateinit var repoListView: UITableView
+
     @ObjCAction
     fun buttonPressed(sender: ObjCObject?) {
         label.text = "Kotlin says: 'Hello, ${textField.text}!'"
