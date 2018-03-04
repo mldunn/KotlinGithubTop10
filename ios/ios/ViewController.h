@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITableView *repoListView;
+
+- (IBAction)buttonPressed:(id)sender;
 
 @end
 

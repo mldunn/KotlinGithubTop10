@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6"
+    }
+}
+apply plugin: "konan"
+
+konan.targets = ["iphone", "iphone_sim"]
+
+konanArtifacts {
+    def productsDir = new File("Frameworks").absolutePath
+
+    interop("libs") {
+        defFile "src/main/c_interop/libs.def"
+
+        compilerOpts "-F${productsDir}"
+        linkerOpts "-F${productsDir}"
+
+        includeDirs new File(".").getAbsolutePath()
+    }
+
+    program("app") {
+        linkerOpts '-rpath', '@executable_path/Frameworks'
+
+        linkerOpts "-F${productsDir}"
+
+        libraries {
+            artifact "libs"
+        }
+    }
+}
