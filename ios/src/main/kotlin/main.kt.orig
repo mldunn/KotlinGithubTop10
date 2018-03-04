@@ -22,7 +22,29 @@ class AppDelegate : UIResponder(), UIApplicationDelegateProtocol {
 class ViewController : UIViewController {
     constructor(aDecoder: NSCoder) : super(aDecoder)
     override fun initWithCoder(aDecoder: NSCoder) = initBy(ViewController(aDecoder))
+<<<<<<< HEAD
 
+    @ObjCOutlet
+    lateinit var label: UILabel
+
+    @ObjCOutlet
+    lateinit var textField: UITextField
+
+    @ObjCOutlet
+    lateinit var button: UIButton
+
+    @ObjCOutlet
+    lateinit var repoListView: UITableView
+
+    @ObjCAction
+    fun buttonPressed(sender: ObjCObject?) {
+        label.text = "Kotlin says: 'Hello, ${textField.text}!'"
+        // repoListView
+    }
+}
+
+class
+=======
     @ObjCOutlet
     lateinit var label: UILabel
     @ObjCOutlet
@@ -34,3 +56,4 @@ class ViewController : UIViewController {
         label.text = "Kotlin says: 'Hello, ${textField.text}!'"
     }
 }
+>>>>>>> 067b62df9b83fa155fe33a889cc488434f850ca9

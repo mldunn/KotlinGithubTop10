@@ -17,5 +17,7 @@
 
 - (IBAction)buttonPressed:(id)sender;
 
+- (IBAction)buttonPressed:(id)sender;
+
 @end
 
