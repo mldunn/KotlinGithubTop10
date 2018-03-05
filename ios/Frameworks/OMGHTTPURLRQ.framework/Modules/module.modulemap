@@ -1,5 +1,5 @@
 framework module OMGHTTPURLRQ {
-  umbrella header "OMGHTTPURLRQ-umbrella.h"
+  umbrella header "OMGHTTPURLRQ.h"
 
   export *
   module * { export * }

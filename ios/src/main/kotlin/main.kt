@@ -18,6 +18,7 @@ class AppDelegate : UIResponder(), UIApplicationDelegateProtocol {
     override fun window() = _window
     override fun setWindow(window: UIWindow?) { _window = window }
 }
+/*
 @ExportObjCClass
 class ViewController : UIViewController {
     constructor(aDecoder: NSCoder) : super(aDecoder)
@@ -40,3 +41,4 @@ class ViewController : UIViewController {
         label.text = "Kotlin says: 'Hello, ${textField.text}!'"
     }
 }
+*/

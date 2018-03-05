@@ -1,0 +1,32 @@
+PODS:
+  - Groot/ObjC (3.0.1)
+  - ILGHttpConstants (2.0.0)
+  - MBProgressHUD (1.0.0)
+  - OMGHTTPURLRQ (3.2.4):
+    - OMGHTTPURLRQ/RQ (= 3.2.4)
+  - OMGHTTPURLRQ/FormURLEncode (3.2.4)
+  - OMGHTTPURLRQ/RQ (3.2.4):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.2.4)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
+
+DEPENDENCIES:
+  - Groot/ObjC (~> 3.0-beta.1)
+  - ILGHttpConstants (~> 2.0.0)
+  - MBProgressHUD (~> 1.0.0)
+  - OMGHTTPURLRQ (~> 3.2.2)
+  - SDWebImage (~> 4.1.0)
+
+SPEC CHECKSUMS:
+  Groot: a668afbcf0be88d76c0a26c714cfa4638ceaca66
+  ILGHttpConstants: e00456719151b96eec4b1c170e12f5edf71564e1
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  OMGHTTPURLRQ: 9ac96bdf5c90a33f75836630729ea1adc312a9ed
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+
+PODFILE CHECKSUM: 1a837d44c1591c8d67e95387a0301cc13d7a1d2a
+
+COCOAPODS: 1.4.0
