@@ -10,6 +10,7 @@ class TableViewController(aDecoder: NSCoder) : UITableViewController(aDecoder), 
     private var githubService: GithubService =  GithubService()
 
     init {
+        NSLog("TableViewController.init")
         githubService.getRepos()
     }
 
