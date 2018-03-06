@@ -7,13 +7,8 @@ const val ENDPOINT: String = "https://api.github.com/search/repositories?q=langu
 
 class GithubService {
 
-    fun getRepos() {
-        NSLog("GithubService.getRepos()")
-        /*val request = NSURLRequest(NSURL(ENDPOINT))
-        request.addValue("application/json", forHTTPHeaderField = "Accept")
-        request.setHTTPMethod("GET")
-        val con = NSURLConnection().initWithRequest(request, this)*/
-
+    fun getRepos(onComplete: (List<Repo>) -> Unit) {
+        val repos: MutableList<Repo> = ArrayList()
         val request: NSMutableURLRequest = OMGHTTPURLRQ.GET(ENDPOINT, null, error = null)!!
         request.addValue("application/json", forHTTPHeaderField = "Accept")
         NSLog("GithubService.1")
@@ -29,7 +24,12 @@ class GithubService {
             val items = dict.valueForKey("items").uncheckedCast<NSArray>()
             NSLog("GithubService.5")
             NSLog(items.objectAtIndex(0).uncheckedCast<NSDictionary>().valueForKey("full_name").toString())
+            for (i in 0 until items.count()) {
+                val item = items.objectAtIndex(i).uncheckedCast<NSDictionary>()
+                var repo = Repo(item.valueForKey("full_name").uncheckedCast(), item.valueForKey("stargazers_count").uncheckedCast(), item.valueForKey("forks").uncheckedCast())
+                repos.add(repo)
+            }
+            onComplete(repos)
         }.resume()
-
     }
 }
