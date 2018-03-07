@@ -14,16 +14,15 @@ class TableViewController(aDecoder: NSCoder) : UITableViewController(aDecoder), 
 
     override fun viewDidLoad() {
         super.viewDidLoad()
-        NSLog("TableViewController.1")
+
+        // get the data
         githubService.getRepos {
-            NSLog(it.toString())
             data = it
             dispatch_async(dispatch_get_main_queue(), {
-                NSLog("TableViewController.3")
+                // refresh the tableview
                 tableView.reloadData()
             })
         }
-        NSLog("TableViewController.2")
     }
 
     override fun initWithCoder(aDecoder: NSCoder) = initBy(TableViewController(aDecoder))
@@ -31,7 +30,8 @@ class TableViewController(aDecoder: NSCoder) : UITableViewController(aDecoder), 
     override fun tableView(tableView: UITableView, cellForRowAtIndexPath: NSIndexPath): UITableViewCell {
         val cell = tableView.dequeueReusableCellWithIdentifier("repo", cellForRowAtIndexPath)
 
-        cell.textLabel?.text = data[cellForRowAtIndexPath.row.toInt()].title
+        val repo = data[cellForRowAtIndexPath.row.toInt()]
+        cell.textLabel?.text = "${repo.title} | Stars: ${repo.stars} | Forks: ${repo.forks}"
 
         return cell
     }

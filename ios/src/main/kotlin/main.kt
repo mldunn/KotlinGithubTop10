@@ -18,27 +18,3 @@ class AppDelegate : UIResponder(), UIApplicationDelegateProtocol {
     override fun window() = _window
     override fun setWindow(window: UIWindow?) { _window = window }
 }
-/*
-@ExportObjCClass
-class ViewController : UIViewController {
-    constructor(aDecoder: NSCoder) : super(aDecoder)
-    override fun initWithCoder(aDecoder: NSCoder) = initBy(ViewController(aDecoder))
-
-    @ObjCOutlet
-    lateinit var label: UILabel
-
-    @ObjCOutlet
-    lateinit var textField: UITextField
-
-    @ObjCOutlet
-    lateinit var button: UIButton
-
-    @ObjCOutlet
-    lateinit var repoListView: UITableView
-
-    @ObjCAction
-    fun buttonPressed(sender: ObjCObject?) {
-        label.text = "Kotlin says: 'Hello, ${textField.text}!'"
-    }
-}
-*/
