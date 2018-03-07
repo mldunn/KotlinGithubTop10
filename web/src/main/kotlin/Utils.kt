@@ -1,4 +1,5 @@
 import kotlinx.html.*
+import model.Repo
 
 fun HtmlBlockTag.render(repo: Repo) {
     div {

@@ -17,7 +17,7 @@ compileKotlin2Js.kotlinOptions.suppressWarnings = true
 compileKotlin2Js.kotlinOptions.verbose = true
 
 build.doLast {
-    // Copy kotlin.js and kotlin-meta.js from jar into web directory
+    // explode jar in build directory
     configurations.compile.each { File file ->
         copy {
             includeEmptyDirs = false
